@@ -1,9 +1,8 @@
 NAME = philo
 CC = @cc
 RM = rm -f
-CFLAGS = -Werror -Wextra -Wall
-# -fsanitize=thread -g3
-OBJ = philo.o utils.o utils1.o
+CFLAGS =  -Werror -Wextra -Wall  #-fsanitize=thread -g3
+OBJ = philo.o utils.o utils1.o parsing.o
 
 all: $(NAME)
 

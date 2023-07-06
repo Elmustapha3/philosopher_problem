@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philo.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: eej-jama <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/06 15:56:18 by eej-jama          #+#    #+#             */
+/*   Updated: 2023/07/06 15:56:27 by eej-jama         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHILO_H
 # define PHILO_H
 
@@ -50,26 +62,19 @@ typedef struct s_info
     t_mutex mutexs;
 }               t_info;
 
-
-
 void        *philo_routine(void *tmp);
 void        eating(t_philo *philo);
 void		ft_usleep(long time_to_eat);
 void        display_msg(char *mgs, t_philo *philo, int a);
-// long        _time();
 void	    eating(t_philo *philo);
-void		initialize_and_start(t_info *info);
-long         get_current_time();
-// long        get_time_from_1970();
-// void		print_error(char *str);
+void		initialize_and_create_philo(t_info *info);
+long        get_current_time();
+void	    create_philo(t_info *info);
 int			check_arguments(int ac, char *av[]);
-// void		print_message(t_philo *philo, char *str, int i);
-// void		destroy_mutexes(t_info *info);
 long        ft_atoi(char *str);
 void        ft_usleep(long time_to_eat);
-// int         philo_die(t_info *info);
+int         philo_die(t_info *info);
 int 		check_if_all_philo_eat_the_max(t_info info);
-// void        create_threads(t_info *info);
 void        intialize_args_and_mutex(int ac, char *av[], t_info *info);
 void        join_and_destroy(t_info *info);
 
