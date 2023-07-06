@@ -1,6 +1,6 @@
 NAME = philo
-CC = @cc
-RM = rm -f
+CC = cc
+RM = rm -rf
 CFLAGS =  -Werror -Wextra -Wall  #-fsanitize=thread -g3
 OBJ = philo.o utils.o utils1.o parsing.o
 
@@ -12,10 +12,7 @@ $(NAME):$(OBJ)
 clean:
 	$(RM) $(OBJ)
 
-
 fclean: clean
 	$(RM) $(NAME)
-	$(RM) $(NAME)
-	$(RM) $(B_NAME)
 
 re: fclean all
